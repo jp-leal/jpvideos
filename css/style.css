@@ -8,8 +8,10 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
     font-family: 'Roboto', sans-serif;
 }
+
 
 /* Define the fade-out animation */
 @keyframes fadeOut {
@@ -34,7 +36,7 @@ nav {
     z-index: 1000; /* Ensure the header is on top */
     height: 80px;
     width: 100%;
-    max-width: 1400px;
+    max-width: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,11 +58,10 @@ nav:hover {
 .nav-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
-    max-width: 1400px;
+    max-width: 100%;
     height: 60px;
-    padding: 0 20px;
+    padding: 0;
 }
 
 .header-hidden {
@@ -108,11 +109,7 @@ nav:hover {
     display: block; /* Ensure the iframe is a block element */
 }
 
-html, body {
-    height: 100%; /* Ensure full height for fixed/absolute positioning */
-    margin: 0;
-    padding: 0;
-}
+
 
 body {
     min-height: 100vh;
@@ -402,24 +399,27 @@ nav a:hover::after {
 .about-section {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 70px 70px;
-    max-width: 1400px;
-    margin: auto;
+    max-width: 1500px;
+    margin: 0 auto;
     flex-wrap: wrap;
     box-sizing: border-box;
+    text-align: left;
 }
 
 .about-section img {
-    margin-left: 70px;
-    margin-bottom: 20px;
-    max-width: 70%;
+    flex: 1; /* Allow the image to take up equal space */
+    max-width: 50%; /* Limit image width to half of the container */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .about-section .about-text {
-    max-width: 70%;
+    flex: 1; /* Allow the text to take up equal space */
+    max-width: 50%; /* Limit text width to half of the container */
+    margin-right: 20px; /* Add space between text and image */
     text-align: left;
 }
 
