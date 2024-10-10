@@ -4,9 +4,10 @@
     box-sizing: border-box;
 }
 
-/* General styles for the page */
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    width: 100%;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -32,7 +33,7 @@ nav {
     backdrop-filter: blur(5px); /* Slight blur effect */
     z-index: 1000; /* Ensure the header is on top */
     height: 80px;
-    width: 100vw;
+    width: 100%;
     max-width: 1400px;
     display: flex;
     justify-content: center;
@@ -118,7 +119,7 @@ body {
     font-family: 'Crimson Text', serif;
     background-color: #f7f7f7;
     color: #001c00;
-    cursor: url('images/mouse.png'), auto;
+    cursor: url('../images/mouse.png'), auto;
     overflow-x: hidden;
     overflow-y: auto;
     scroll-behavior: smooth;
@@ -169,7 +170,7 @@ nav a {
     font-size: 1.4em;
     position: relative;
     transition: color 0.3s;
-    cursor: url('images/mouse.png'), auto;
+    cursor: url('../images/mouse.png'), auto;
 }
 
 nav a:hover {
@@ -277,7 +278,7 @@ nav a:hover::after {
     color: #000;
     border: 2px solid transparent;
     border-radius: 8px;
-    cursor: url('images/mouse.png'), auto;
+    cursor: url('../images/mouse.png'), auto;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
     outline: none;
 }
@@ -307,7 +308,7 @@ nav a:hover::after {
 .video-controls img {
     width: 24px;
     height: auto;
-    cursor: url('images/mouse.png'), auto;
+    cursor: url('../images/mouse.png'), auto;
     transition: opacity 0.9s;
     background: rgba(0, 0, 0, 0.5); /* Opaque background */
     border-radius: 50%; /* Optional: Rounded corners */
@@ -348,7 +349,7 @@ nav a:hover::after {
 .grid-item {
     position: relative;
     overflow: hidden;
-    cursor: url('images/mouse.png'), auto;
+    cursor: url('../images/mouse.png'), auto;
     transition: opacity 0.3s;
 }
 
