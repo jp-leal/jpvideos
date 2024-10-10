@@ -54,7 +54,22 @@ nav > * {
 nav:hover {
     background-color: rgba(255, 255, 255, 1); /* Slightly less transparent on hover */
 }
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: none; /* Hide by default */
+}
 
+.video-container:hover .play-button {
+    display: block; /* Show on hover */
+}
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -99,7 +114,7 @@ nav:hover {
     position: relative;
     width: 100%;
     max-width: 1200px; /* Adjust as needed */
-    height: 450px; /* Adjust as needed */
+    height: 480px; /* Adjust as needed */
 }
 
 .video-container iframe {
@@ -219,7 +234,7 @@ nav a:hover::after {
 .video-section {
     position: relative;
     width: 100vw;
-    height: calc(100vh - 25px); /* Full viewport height minus header height */
+    height: calc(100vh - 5px); /* Full viewport height minus header height */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -400,17 +415,20 @@ nav a:hover::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 70px 70px;
+    padding: 70px 10px;
     max-width: 1500px;
     margin: 0 auto;
     flex-wrap: wrap;
     box-sizing: border-box;
     text-align: left;
+    
 }
 
 .about-section img {
-    flex: 1; /* Allow the image to take up equal space */
-    max-width: 50%; /* Limit image width to half of the container */
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px; /* Optional: Add top margin to the image for more spacing */
+    max-width: 80%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -418,9 +436,10 @@ nav a:hover::after {
 
 .about-section .about-text {
     flex: 1; /* Allow the text to take up equal space */
-    max-width: 50%; /* Limit text width to half of the container */
-    margin-right: 20px; /* Add space between text and image */
+    max-width: 80%; /* Limit text width to half of the container */
+    margin-right: 40px; /* Add space between text and image */
     text-align: left;
+    font-size: 1.2em; /* Increased font size */
 }
 
 .about-section h2 {
