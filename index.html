@@ -14,25 +14,41 @@
 </head>
 <body>
 
-        <nav>
-            <div class="nav-container">
-            <div class="logo">JPFILMS</div>
-            <ul class="nav-links sidebar">
-                <li onclick=closemenu()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <ul class="nav-links">
+<nav>
+    <div class="nav-container">
+        <!-- Make the logo clickable -->
+        <a href="index.html" class="logo">
+            JPFILMS
+        </a>
+        <ul class="nav-links sidebar">
+            <li onclick="closemenu()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                    </svg>
+                </a>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul class="nav-links">
             <li class="hideOnMobile"><a href="index.html">Home</a></li>
-                <li class="hideOnMobile"><a href="about.html">About</a></li>
-                <li class="hideOnMobile"><a href="#contact">Contact</a></li>
-                <li class="menu-button" onclick="openmenu()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-            </ul>
-            </div>
-        </nav>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+            <li class="menu-button" onclick="openmenu()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-        
+
+
 <div class="main-content">
 <div class="portfolio-container">
     <!-- Generate rectangles with links -->
