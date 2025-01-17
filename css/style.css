@@ -1,38 +1,52 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
+
+/*html, body {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    font-family: 'Roboto', sans-serif;*/
+/*}*/
+
+/*body {*/
+/*    min-height: 100vh;*/
+/*    font-family: 'Crimson Text', serif;*/
+/*    background-color: #f7f7f7; !* Set a background color for the whole page *!*/
+/*    color: #001c00;*/
+/*    cursor: url('../images/mouse.png'), auto;*/
+/*    overflow-x: hidden;*/
+/*    overflow-y: auto;*/
+/*    scroll-behavior: smooth;*/
+/*}*/
+
 
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
+    display: flex; /* Using flex to arrange sections */
+    flex-direction: column; /* Stack sections vertically */
+    justify-content: flex-start; /* Align content to the top */
     font-family: 'Roboto', sans-serif;
-}
-
-
-/* Define the fade-out animation */
-@keyframes fadeOut {
-    from {
-        background-color: rgba(255, 255, 255, 1); /* Start with full opacity and white background */
-        opacity: 1; /* Fully opaque */
-    }
-    to {
-        background-color: rgba(255, 255, 255, 0.6); /* End with semi-transparent background */
-        opacity: 0.5; /* End with semi-transparent appearance */
-    }
+    background-color: #f7f7f7;
+    color: #001c00;
+    cursor: url('../images/mouse.png'), auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    min-height: 100vh;
 }
 
 /* Updated Nav Styles with Fade-Out Animation */
 nav {
-    position: fixed;
-    top: 0;
+    position: relative;
+    top: 40px;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.7); /* Start with almost transparent background */
-    backdrop-filter: blur(5px); /* Slight blur effect */
+    background-color: transparent;
     z-index: 1000; /* Ensure the header is on top */
     height: 80px;
     width: 100%;
@@ -42,41 +56,26 @@ nav {
     align-items: center;
     padding: 18px 30px;
     box-sizing: border-box;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     margin: 0; /* Center align the header */
     transition: background-color 0.3s ease, opacity 0.3s ease;
-    opacity: 0.6; /* Initial opacity */
+    opacity: 1; /* Initial opacity */
 }
 nav > * {
     color: #001c00; /* Ensure color of text and links in the header is preserved */
     opacity: 1; /* Ensure child elements are fully opaque */
 }
-nav:hover {
-    background-color: rgba(255, 255, 255, 1); /* Slightly less transparent on hover */
-}
-.play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    display: none; /* Hide by default */
-}
 
-.video-container:hover .play-button {
-    display: block; /* Show on hover */
-}
+
 .nav-container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 70%; /* Adjust this to compress the content more */
     max-width: 100%;
-    height: 60px;
-    padding: 0;
+    height: 30px;
+    padding: 0 20px; /* Add horizontal padding to provide margins */
+    margin: 0 auto; /* Center the container */
+    margin-top: 60px;
 }
 
 .header-hidden {
@@ -84,7 +83,8 @@ nav:hover {
 }
 
 .content {
-    padding-top: 80px; /* Space for fixed header */
+    margin-top: 0px; /* Adjust this margin so that the content doesn't get hidden behind the fixed header */
+    padding-top: 120px; /* Space for fixed header */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,46 +96,7 @@ nav:hover {
     margin-top: 20px; /* Adjust as needed */
 }
 
-.title-description {
-    position: absolute;
-    top: 10%; /* Adjust this value to move title closer to the top of the video */
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff; /* Ensure text is readable */
-    z-index: 2; /* Ensure title is above video */
-}
 
-.title-description h2, .title-description h3 {
-    margin: 0;
-    padding: 0;
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px; /* Adjust as needed */
-    height: 480px; /* Adjust as needed */
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block; /* Ensure the iframe is a block element */
-}
-
-
-
-body {
-    min-height: 100vh;
-    font-family: 'Crimson Text', serif;
-    background-color: #f7f7f7;
-    color: #001c00;
-    cursor: url('../images/mouse.png'), auto;
-    overflow-x: hidden;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Crimson Text', serif;
@@ -153,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: flex-end;
     padding: 0;
-    margin: 0;
+    margin-top: 30px;
     width: 100%; /* Ensure links take full width */
 }
 
@@ -230,132 +191,18 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* Video Section Styles */
-.video-section {
-    position: relative;
-    width: 100vw;
-    height: calc(100vh - 5px); /* Full viewport height minus header height */
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.video-section video {
-    top: 10%;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    aspect-ratio: 16 / 9;
-}
-
-.video-section .overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centers the overlay text */
-    text-align: center;
-    color: #fff;
-    padding: 0 20px;
-    box-sizing: border-box;
-    z-index: 2; /* Ensure it's above the video */
-    opacity: 0; /* Start invisible */
-    animation: fadeIn 3s ease-in forwards; /* Apply fade-in animation */
-    animation-delay: 7s; /* Delay animation by 3 seconds */
-   
-}
-
-    @keyframes fadeIn {
-        to {
-            opacity: 1;
-        }
-    }
-
-
-.video-section .overlay-text h1 {
-    font-size: 2.6em;
-    margin-bottom: 3%;
-}
-
-.video-section .overlay-text p {
-    font-size: 1.2em;
-    margin-bottom: 3%;
-}
-
-.video-section .overlay-text button {
-    font-size: 1em;
-    margin-top: 5px;
-    padding: 12px 24px;
-    background-color: #f7f7f7;
-    color: #000;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    cursor: url('../images/mouse.png'), auto;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
-    outline: none;
-}
-
-.video-section .overlay-text button:hover {
-    background-color: #004d00;
-    color: #f7f7f7;
-    border-color: #004d00;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.video-section .overlay-text button:focus {
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
-}
-
-/* Video Controls */
-.video-controls {
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
-    display: flex;
-    gap: 10px;
-    color: #fff;
-    z-index: 15;
-}
-
-.video-controls img {
-    width: 24px;
-    height: auto;
-    cursor: url('../images/mouse.png'), auto;
-    transition: opacity 0.9s;
-    background: rgba(0, 0, 0, 0.5); /* Opaque background */
-    border-radius: 50%; /* Optional: Rounded corners */
-    padding: 5px; /* Space around icon */
-}
-
-.video-controls .volume-icon,
-.video-controls .play-pause-icon {
-    opacity: 0.7;
-}
-
-.video-controls .volume-icon:hover,
-.video-controls .play-pause-icon:hover {
-    opacity: 1;
-}
-
-.video-controls .volume-on,
-.video-controls .play {
-    display: block;
-}
-
-.video-controls .volume-off,
-.video-controls .pause {
-    display: none;
-}
 
 /* Portfolio Section */
 .portfolio-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, minmax(0, 1fr));
-    gap: 10px;
-    width: 100%;
-    padding: 20px;
-    margin-top: 0;
+    gap: 40px;
+    width: 70%;
+    padding: 60px;
+    max-width: 100%; 
+    margin: 100px auto;
+    
 }
 
 .grid-item {
@@ -363,6 +210,9 @@ nav a:hover::after {
     overflow: hidden;
     cursor: url('../images/mouse.png'), auto;
     transition: opacity 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-item img {
@@ -381,7 +231,7 @@ nav a:hover::after {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease;
     z-index: 1;
 }
 
@@ -667,23 +517,6 @@ h4 {
         display: none;
     }
     
-    /* Overlay Text Adjustment */
-    .video-section .overlay-text {
-        font-size: 11px;
-        top: 63%;
-        left: 5%;
-        bottom: 5%;
-        text-align: left;
-    }
-
-    .video-section .overlay-text h1 {
-        font-size: 16px;
-        margin-bottom: 1%;
-    }
-
-    .video-section .overlay-text p {
-        margin-bottom: 1%;
-    }
 
     /* Header Text Alignment */
     h2, h5 {
