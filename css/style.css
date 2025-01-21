@@ -49,12 +49,12 @@ nav {
     background-color: transparent;
     z-index: 1000; /* Ensure the header is on top */
     height: 80px;
-    width: 100%;
+    width: 100vw;
     max-width: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 30px;
+    padding: 0;
     box-sizing: border-box;
     box-shadow: none;
     margin: 0; /* Center align the header */
@@ -73,12 +73,12 @@ nav > * {
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    width: 80%; /* Adjust this to compress the content more */
+    width: 95%; /* Adjust this to compress the content more */
     max-width: 100%;
     height: 50px;
-    padding: 0 20px; /* Add horizontal padding to provide margins */
+    padding: 0 10px; /* Add horizontal padding to provide margins */
     margin: 0 auto; /* Center the container */
-    margin-top: 60px;
+    margin-top: 35px;
     
 }
 
@@ -222,23 +222,21 @@ nav .nav-links li:last-child {
 .portfolio-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, minmax(0, 1fr));
-    gap: 40px;
-    width: 90%;
-    padding: 40px;
-    max-width: 100%; 
-    margin: 100px auto;
+    gap: 20px;
+ max-width: 1200px;
+    padding: 20px;
+    margin: 80px auto;
     
 }
 
 .grid-item {
+    aspect-ratio: 16 / 9; /* Maintain the 16:9 aspect ratio */
     position: relative;
     overflow: hidden;
     cursor: url('../images/mouse.png'), auto;
     transition: opacity 0.3s;
     display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
 .grid-item img {
@@ -486,16 +484,16 @@ h4 {
 @media (max-width: 768px) {
     /* Logo Adjustment */
     .logo {
-        font-size: 2em;
+        font-size: 1.7em;
         margin-left: 0;
-        padding-top: 20px;
+        padding-top: 0;
     }
     .nav-container {
         display: flex;
-        justify-content: space-between; /* This ensures the logo and menu items are spaced apart */
+        justify-content: center;
         align-items: center;
-        width: 75%; /* Ensure the container takes up full width */
-        padding: 30px; /* Adjust padding for better spacing */
+        width: 100%; /* Ensure the container takes up full width */
+        padding: 0; /* Adjust padding for better spacing */
     }
 
     /* About Section Adjustment */
@@ -525,8 +523,7 @@ h4 {
 
     /* Portfolio Grid Adjustment */
     .portfolio-container {
-        grid-template-columns: repeat(2, 2fr);
-        grid-template-rows: repeat(6, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
     }
 
     /* Footer Contact Section */
@@ -561,12 +558,17 @@ h4 {
 @media (max-width: 480px) {
     /* Logo Further Adjustment */
     .logo {
-        font-size: 1.6em;
+        font-size: 1.2em;
         margin-left: 10px;
         padding-top: 25px;
     }
+
+    .logo-subtitle {
+        font-size: 0.4em; /* Smaller font size */
+margin-left: 20px;
+    }
     nav a {
-        padding: 0 5px;
+        padding: 0 25px;
     }
 
     /* About Section Further Adjustment */
@@ -588,8 +590,7 @@ h4 {
 
     /* Portfolio Grid Single Column */
     .portfolio-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(12, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
     }
 
     /* Sidebar Adjustment */
