@@ -30,7 +30,7 @@ html, body {
     display: flex; /* Using flex to arrange sections */
     flex-direction: column; /* Stack sections vertically */
     justify-content: flex-start; /* Align content to the top */
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f7f7f7;
     color: #001c00;
     cursor: url('../images/mouse.png'), auto;
@@ -54,12 +54,13 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 18px 30px;
+    padding: 15px 30px;
     box-sizing: border-box;
     box-shadow: none;
     margin: 0; /* Center align the header */
     transition: background-color 0.3s ease, opacity 0.3s ease;
     opacity: 1; /* Initial opacity */
+
 }
 nav > * {
     color: #001c00; /* Ensure color of text and links in the header is preserved */
@@ -70,13 +71,15 @@ nav > * {
 .nav-container {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     width: 70%; /* Adjust this to compress the content more */
     max-width: 100%;
-    height: 30px;
+    height: 50px;
     padding: 0 20px; /* Add horizontal padding to provide margins */
     margin: 0 auto; /* Center the container */
     margin-top: 60px;
+    
 }
 
 .header-hidden {
@@ -100,15 +103,34 @@ nav > * {
 
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .logo {
     font-size: 2.9em;
-    margin-left: 0; /* Remove the margin */
+    margin: 0; /* Remove the margin */
     color: #001c00; /* Ensure the logo maintains its color */
     opacity: 1; /* Keep the logo fully opaque */
     transition: font-size 0.3s, margin-left 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.jp, .leal {
+    display: inline-block; /* Ensure they are on the same line */
+    margin: 0;
+}
+
+.jp {
+    margin-right: 10px; /* Add space between JP and LEAL */
+}
+
+.logo-subtitle {
+    font-size: 0.8em; /* Smaller font size */
+    color: #001c00; /* Maintain the same color as the logo */
+    margin-top: 5px; /* Adjust margin between logo and subtitle */
+    font-family: 'Poppins', sans-serif; /* Use the same font as the body */
+    opacity: 0.8; /* Slightly reduce opacity for a subtler look */
 }
 
 .nav-links {
@@ -134,14 +156,14 @@ nav li {
 }
 
 nav a {
+    font-family: 'Poppins', sans-serif; /* Ensure Poppins is applied */
     display: flex;
     align-items: center;
     height: 100%;
-    opacity: 1; /* Keep links fully opaque */
     padding: 0 20px;
     text-decoration: none;
     color: #001c00;
-    font-size: 1.4em;
+    font-size: 1em;
     position: relative;
     transition: color 0.3s;
     cursor: url('../images/mouse.png'), auto;
@@ -168,6 +190,9 @@ nav a::after {
 nav a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+nav .nav-links li:last-child {
+    margin-right: 20px; /* Adjust space for the last item */
 }
 
 /* Sidebar Styles */
@@ -199,8 +224,8 @@ nav a:hover::after {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, minmax(0, 1fr));
     gap: 40px;
-    width: 70%;
-    padding: 60px;
+    width: 85%;
+    padding: 40px;
     max-width: 100%; 
     margin: 100px auto;
     
