@@ -488,15 +488,19 @@ h4 {
     /* Logo Adjustment */
     .logo {
         font-size: 1.7em;
-        margin-left: 0;
+        margin-left: 20px;
         padding-top: 0;
     }
     .nav-container {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         width: 100%; /* Ensure the container takes up full width */
-        padding: 0; /* Adjust padding for better spacing */
+       padding: 0 20px;
+    }
+    .logo-subtitle {
+        font-size: 0.8em;
+        margin-left: 38px; /* Aligns with logo */
     }
 
     /* About Section Adjustment */
@@ -544,6 +548,7 @@ h4 {
     /* Menu Button Display */
     .menu-button {
         display: block;
+        margin-left: auto;
     }
 
     /* Hide Elements on Mobile */
