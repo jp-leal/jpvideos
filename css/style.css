@@ -73,7 +73,7 @@ nav > * {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%; /* Adjust this to compress the content more */
+    width: 80%; /* Adjust this to compress the content more */
     max-width: 1200px; /* Add a max-width to limit the header's size */
     height: 50px;
     padding: 0 10px; /* Add horizontal padding to provide margins */
@@ -115,6 +115,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: font-size 0.3s, margin-left 0.3s;
     display: flex;
     align-items: center;
+    margin-left: 85px;
 }
 
 .jp, .leal {
@@ -132,6 +133,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 5px; /* Adjust margin between logo and subtitle */
     font-family: 'Poppins', sans-serif; /* Use the same font as the body */
     opacity: 0.8; /* Slightly reduce opacity for a subtler look */
+    margin-left: 106px;
 
 }
 
@@ -141,6 +143,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin-top: 30px;
     width: 100%; /* Ensure links take full width */
+    margin-right: 200px;
 }
 
 nav ul {
