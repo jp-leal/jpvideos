@@ -1,25 +1,91 @@
+/* Reuse common styles from the main CSS */
+
+/* About Page Specific Styles */
+.about-page {
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px; /* Adjusted for header space */
+    min-height: 100vh;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.about-section img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-section .about-text {
+    flex: 1;
+    max-width: 80%;
+    text-align: left;
+    font-size: 1.2rem; /* Adjusted font size */
+}
+
+.about-section h2 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Divider between sections */
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 40px 0;
+}
+
+/* Footer Adjustments */
+.footer {
+    padding: 40px 20px;
+    border-top: 1px solid #ccc;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust About Section Layout for smaller screens */
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .about-section img {
+        max-width: 70%; /* Make image smaller for smaller screens */
+    }
+
+    .about-section .about-text {
+        text-align: center;
+        max-width: 100%; /* Allow more flexibility */
+    }
+}
 
 
-/*html, body {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    font-family: 'Roboto', sans-serif;*/
-/*}*/
-
-/*body {*/
-/*    min-height: 100vh;*/
-/*    font-family: 'Crimson Text', serif;*/
-/*    background-color: #f7f7f7; !* Set a background color for the whole page *!*/
-/*    color: #001c00;*/
-/*    cursor: url('../images/mouse.png'), auto;*/
-/*    overflow-x: hidden;*/
-/*    overflow-y: auto;*/
-/*    scroll-behavior: smooth;*/
-/*}*/
 
 
 html, body {
@@ -27,18 +93,17 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    display: flex; /* Using flex to arrange sections */
-    flex-direction: column; /* Stack sections vertically */
-    justify-content: flex-start; /* Align content to the top */
+    display: flex;
+    flex-direction: column;
     font-family: 'Poppins', sans-serif;
     background-color: #f7f7f7;
     color: #001c00;
     cursor: url('../images/mouse.png'), auto;
-    overflow-x: hidden;
     overflow-y: auto;
     scroll-behavior: smooth;
     min-height: 100vh;
 }
+
 
 /* Updated Nav Styles with Fade-Out Animation */
 nav {
@@ -80,7 +145,7 @@ nav > * {
     margin-left: 80px;
 
     margin-top: 35px;
-    
+
 }
 
 .header-hidden {
@@ -219,122 +284,6 @@ nav .nav-links li:last-child {
     width: 100%;
 }
 
-
-/* Portfolio Section */
-.portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
- max-width: 1200px;
-    padding: 50px;
-    margin: 80px auto;
-    
-}
-
-.grid-item {
-    aspect-ratio: 16 / 9; /* Maintain the 16:9 aspect ratio */
-    position: relative;
-    overflow: hidden;
-    cursor: url('../images/mouse.png'), auto;
-    transition: opacity 0.3s;
-    display: flex;
-
-}
-
-.grid-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: opacity 0.3s;
-}
-
-.grid-item::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1;
-}
-
-.grid-item::before {
-    content: attr(data-title);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 1.2em;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-    white-space: nowrap;
-    z-index: 2;
-}
-
-.grid-item:hover::after,
-.grid-item:hover::before,
-.grid-item:hover img {
-    opacity: 1;
-}
-
-.grid-item:hover img {
-    opacity: 0.6;
-}
-
-/* About Section */
-.about-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    gap: 40px;
-    margin-top: 120px;
-   
-    
-}
-
-.about-section img {
-    /*margin-left: 40px;*/
-    /*margin-bottom: 20px;*/
-    /*margin-top: 20px; !* Optional: Add top margin to the image for more spacing *!*/
-    max-width: 40%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.about-section .about-text {
-    flex: 1; /* Allow the text to take up equal space */
-    max-width: 80%; /* Limit text width to half of the container */
-    /*margin-right: 40px; !* Add space between text and image *!*/
-    text-align: left;
-    font-size: 1rem; /* Increased font size */
-}
-
-.about-section h2 {
-    font-size: 3em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.about-section p {
-    font-size: 1.2em;
-    line-height: 1.5;
-    color: #555;
-}
-
-/* Divider */
-.divider {
-    width: 100%;
-    height: 1px;
-    background-color: #ccc;
-    margin: 40px 0;
-}
 
 h2 {
     font-size: 2.5em;
@@ -521,11 +470,6 @@ h4 {
         font-size: 1.1em;
     }
 
-    /* Portfolio Grid Adjustment */
-    .portfolio-container {
-        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
-    }
-
     /* Footer Contact Section */
     .footer-content {
         flex-direction: column;
@@ -547,7 +491,7 @@ h4 {
     .hideOnMobile {
         display: none;
     }
-    
+
 
     /* Header Text Alignment */
     h2, h5 {
@@ -565,7 +509,7 @@ h4 {
 
     .logo-subtitle {
         font-size: 0.4em; /* Smaller font size */
-margin-left: 20px;
+        margin-left: 20px;
     }
     nav a {
         padding: 0 25px;
@@ -588,13 +532,10 @@ margin-left: 20px;
         max-width: 100%;
     }
 
-    /* Portfolio Grid Single Column */
-    .portfolio-container {
-        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
-    }
 
     /* Sidebar Adjustment */
     .sidebar {
         width: 100%;
     }
 }
+
