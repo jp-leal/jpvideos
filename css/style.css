@@ -21,6 +21,10 @@
 /*    scroll-behavior: smooth;*/
 /*}*/
 
+@font-face {
+    font-family: 'SweetieBeastie';
+    src: url('/Users/joaoleal/Library/Fonts/Sweetie Besstie.ttf') format('truetype'); /* Make sure to adjust this path */
+}
 
 html, body {
     margin: 0;
@@ -121,10 +125,12 @@ h1, h2, h3, h4, h5, h6 {
 .jp, .leal {
     display: inline-block; /* Ensure they are on the same line */
     margin: 0;
+    font-family: 'SweetieBeastie', sans-serif;
 }
 
 .jp {
     margin-right: 10px; /* Add space between JP and LEAL */
+    font-family: 'SweetieBeastie', sans-serif;
 }
 
 .logo-subtitle {
