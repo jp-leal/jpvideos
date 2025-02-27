@@ -228,8 +228,7 @@ nav .nav-links li:last-child {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
- max-width: 100%;
-    width: 100vw;
+ max-width: 1200px;
     padding: 50px;
     margin: 80px auto;
     
@@ -488,8 +487,8 @@ h4 {
 @media (max-width: 768px) {
     /* Logo Adjustment */
     .logo {
-        font-size: 1.7em;
-        margin-left: 20px;
+        font-size: 2.5em;
+        margin-left: 10px;
         padding-top: 0;
     }
     .nav-container {
@@ -497,11 +496,12 @@ h4 {
         justify-content: space-between;
         align-items: center;
         width: 100%; /* Ensure the container takes up full width */
-       padding: 0 20px;
+       padding: 0 100px;
+        margin-top: 5px;
     }
     .logo-subtitle {
         font-size: 0.8em;
-        margin-left: 38px; /* Aligns with logo */
+        margin-left: 18px; /* Aligns with logo */
     }
 
     /* About Section Adjustment */
@@ -531,7 +531,16 @@ h4 {
 
     /* Portfolio Grid Adjustment */
     .portfolio-container {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+        width: calc(100% - 20px); /* Adds 10px margin on each side */
+        padding: 0;
+        margin: 100px auto;
+        display: grid;
+    }
+
+    .portfolio-container > * {
+        width: 100%;
     }
 
     /* Footer Contact Section */
@@ -548,9 +557,17 @@ h4 {
 
     /* Menu Button Display */
     .menu-button {
-        display: block;
+        display: flex;
         margin-left: auto;
+        top: 15px;
+        right: 65px;
+        width: 45px;
+        height: 45px;
     }
+    .menu-button svg {
+         width: 35px; /* Make icon bigger */
+         height: 35px;
+     }
 
     /* Hide Elements on Mobile */
     .hideOnMobile {
@@ -567,9 +584,9 @@ h4 {
 @media (max-width: 480px) {
     /* Logo Further Adjustment */
     .logo {
-        font-size: 1.2em;
+        font-size: 2.2em;
         margin-left: 10px;
-        padding-top: 25px;
+        padding-top: 0;
     }
 
     .logo-subtitle {
@@ -577,7 +594,7 @@ h4 {
 margin-left: 20px;
     }
     nav a {
-        padding: 0 25px;
+        padding: 0 15px;
     }
 
     /* About Section Further Adjustment */
