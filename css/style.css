@@ -228,7 +228,8 @@ nav .nav-links li:last-child {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
- max-width: 1200px;
+ max-width: 100%;
+    width: 100vw;
     padding: 50px;
     margin: 80px auto;
     
@@ -530,7 +531,7 @@ h4 {
 
     /* Portfolio Grid Adjustment */
     .portfolio-container {
-        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+        grid-template-columns: repeat(2, 1fr); 
     }
 
     /* Footer Contact Section */
