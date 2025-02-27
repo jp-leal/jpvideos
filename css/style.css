@@ -21,10 +21,6 @@
 /*    scroll-behavior: smooth;*/
 /*}*/
 
-@font-face {
-    font-family: 'SweetieBeastie';
-    src: url('/Users/joaoleal/Library/Fonts/Sweetie Besstie.ttf') format('truetype'); /* Make sure to adjust this path */
-}
 
 html, body {
     margin: 0;
@@ -125,12 +121,10 @@ h1, h2, h3, h4, h5, h6 {
 .jp, .leal {
     display: inline-block; /* Ensure they are on the same line */
     margin: 0;
-    font-family: 'SweetieBeastie', sans-serif;
 }
 
 .jp {
     margin-right: 10px; /* Add space between JP and LEAL */
-    font-family: 'SweetieBeastie', sans-serif;
 }
 
 .logo-subtitle {
@@ -494,7 +488,7 @@ h4 {
     /* Logo Adjustment */
     .logo {
         font-size: 2.5em;
-        margin-left: 10px;
+        margin-left: 20px;
         padding-top: 0;
     }
     .nav-container {
@@ -507,7 +501,7 @@ h4 {
     }
     .logo-subtitle {
         font-size: 0.8em;
-        margin-left: 18px; /* Aligns with logo */
+        margin-left: 38px; /* Aligns with logo */
     }
 
     /* About Section Adjustment */
@@ -590,9 +584,9 @@ h4 {
 @media (max-width: 480px) {
     /* Logo Further Adjustment */
     .logo {
-        font-size: 2.2em;
+        font-size: 3em;
         margin-left: 10px;
-        padding-top: 0;
+        padding-top: 5px;
     }
 
     .logo-subtitle {
@@ -600,7 +594,7 @@ h4 {
 margin-left: 20px;
     }
     nav a {
-        padding: 0 15px;
+        padding: 0 25px;
     }
 
     /* About Section Further Adjustment */
