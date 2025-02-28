@@ -294,19 +294,27 @@ nav .nav-links li:last-child {
 .about-section {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Align text and image on opposite sides */
     padding: 40px 20px;
-    gap: 40px;
     margin-top: 120px;
+    max-width: 1200px; /* Limit the overall width of the section */
+    margin-left: auto;
+    margin-right: auto; /* Center the section on the page */
    
     
+}
+
+.about-container {
+    display: flex;
+    width: 100%;
+    gap: 40px; /* Add space between text and image */
 }
 
 .about-section img {
     /*margin-left: 40px;*/
     /*margin-bottom: 20px;*/
     /*margin-top: 20px; !* Optional: Add top margin to the image for more spacing *!*/
-    max-width: 40%;
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -314,7 +322,7 @@ nav .nav-links li:last-child {
 
 .about-section .about-text {
     flex: 1; /* Allow the text to take up equal space */
-    max-width: 80%; /* Limit text width to half of the container */
+    max-width: 60%; /* Limit text width to half of the container */
     /*margin-right: 40px; !* Add space between text and image *!*/
     text-align: left;
     font-size: 1rem; /* Increased font size */
@@ -515,7 +523,8 @@ h4 {
     .about-section {
         flex-direction: column;
         text-align: center;
-        padding: 60px 20px;
+        padding: 5px 20px;
+        margin-top: 50px;
     }
 
     .about-section img {
@@ -534,6 +543,10 @@ h4 {
 
     .about-section p {
         font-size: 1.1em;
+    }
+
+    .about-container {
+        display: block; /* Disable .about-container on smaller screens */
     }
 
     /* Portfolio Grid Adjustment */
