@@ -117,8 +117,12 @@ header button:hover {
     }
 
     .content h3 {
-        font-size: 1.3em;
+        font-size: 0.5em;
     }
+}
+
+.header-content h1 {
+    font-size: 1.5rem; /* Adjusted font size for medium screens */
 }
 
 @media (max-width: 480px) {
