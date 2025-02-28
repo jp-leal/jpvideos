@@ -21,6 +21,10 @@
 /*    scroll-behavior: smooth;*/
 /*}*/
 
+@font-face {
+    font-family: 'SweetieBeastie';
+    src: url('/Users/joaoleal/Library/Fonts/Sweetie Besstie.ttf') format('truetype'); /* Replace with the correct path to your font */
+}
 
 html, body {
     margin: 0;
@@ -116,26 +120,23 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     margin-left: 85px;
+    font-family: 'SweetieBeastie', sans-serif;
 }
 
 .jp, .leal {
     display: inline-block; /* Ensure they are on the same line */
     margin: 0;
+    margin-right: 10px;
 }
 
 .jp {
     margin-right: 10px; /* Add space between JP and LEAL */
 }
 
-.logo-subtitle {
-    font-size: 0.8em; /* Smaller font size */
-    color: #001c00; /* Maintain the same color as the logo */
-    margin-top: 5px; /* Adjust margin between logo and subtitle */
-    font-family: 'Poppins', sans-serif; /* Use the same font as the body */
-    opacity: 0.8; /* Slightly reduce opacity for a subtler look */
-    margin-left: 106px;
-
+.jp, .leal, .FILMS {
+    display: inline-block;
 }
+
 
 .nav-links {
     display: flex;
@@ -487,9 +488,10 @@ h4 {
 @media (max-width: 768px) {
     /* Logo Adjustment */
     .logo {
-        font-size: 2.5em;
-        margin-left: 20px;
+        font-size: 1.7em;
+        margin-left: -26px;
         padding-top: 0;
+        transform: scaleY(0.9); /* Compress the height */
     }
     .nav-container {
         display: flex;
@@ -497,12 +499,12 @@ h4 {
         align-items: center;
         width: 100%; /* Ensure the container takes up full width */
        padding: 0 100px;
-        margin-top: 5px;
+        margin-top: 25px;
     }
-    .logo-subtitle {
-        font-size: 0.8em;
-        margin-left: 38px; /* Aligns with logo */
-    }
+
+   
+      
+    
 
     /* About Section Adjustment */
     .about-section {
@@ -535,7 +537,7 @@ h4 {
         max-width: 100%;
         width: calc(100% - 20px); /* Adds 10px margin on each side */
         padding: 0;
-        margin: 100px auto;
+        margin: 80px auto;
         display: grid;
     }
 
@@ -562,7 +564,7 @@ h4 {
         top: 15px;
         right: 65px;
         width: 45px;
-        height: 45px;
+        height: 5px;
     }
     .menu-button svg {
          width: 35px; /* Make icon bigger */
@@ -584,15 +586,12 @@ h4 {
 @media (max-width: 480px) {
     /* Logo Further Adjustment */
     .logo {
-        font-size: 3em;
+        font-size: 1.6em;
         margin-left: 10px;
         padding-top: 5px;
     }
 
-    .logo-subtitle {
-        font-size: 0.4em; /* Smaller font size */
-margin-left: 20px;
-    }
+ 
     nav a {
         padding: 0 25px;
     }
