@@ -126,11 +126,11 @@ h1, h2, h3, h4, h5, h6 {
 .jp, .leal {
     display: inline-block; /* Ensure they are on the same line */
     margin: 0;
-    margin-right: 10px;
+    margin-right: 7px;
 }
 
 .jp {
-    margin-right: 10px; /* Add space between JP and LEAL */
+    margin-right: 7px; /* Add space between JP and LEAL */
 }
 
 .jp, .leal, .FILMS {
