@@ -560,10 +560,10 @@ h4 {
     /* Menu Button Display */
     .menu-button {
         display: flex;
-        margin-left: auto;
+        margin-left: 15px;
         top: 15px;
-        right: 65px;
-        width: 45px;
+        right: 75px;
+        width: 25px;
         height: 5px;
     }
     .menu-button svg {
