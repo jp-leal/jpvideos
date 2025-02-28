@@ -122,7 +122,18 @@ header button:hover {
 }
 
 .header-content h1 {
-    font-size: 1.5rem; /* Adjusted font size for medium screens */
+    font-size: 1.1rem; /* Adjusted font size for medium screens */
+}
+
+header button {
+    background: none;
+    border: none;
+    color: #001c00;
+    padding: 5px 5px;
+    font-size: 0.7em;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-family: 'Open Sans', sans-serif;
 }
 
 @media (max-width: 480px) {

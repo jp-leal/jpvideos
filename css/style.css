@@ -607,14 +607,25 @@ h4 {
 @media (max-width: 480px) {
     /* Logo Further Adjustment */
     .logo {
-        font-size: 1.6em;
+        font-size: 1.4em;
         margin-left: 10px;
         padding-top: 5px;
     }
-
+    .menu-button {
+        display: flex;
+        margin-left: 0px;
+        top: 15px;
+        right: 5px;
+        width: 25px;
+        height: 5px;
+    }
+    .menu-button svg {
+        width: 35px; /* Make icon bigger */
+        height: 35px;
+    }
  
     nav a {
-        padding: 0 25px;
+        padding: 0 5px;
     }
 
     /* About Section Further Adjustment */
