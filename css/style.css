@@ -229,8 +229,8 @@ nav .nav-links li:last-child {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
- max-width: 1200px;
-    padding: 50px;
+ max-width: 1250px;
+    padding: 40px;
     margin: 80px auto;
     
 }
