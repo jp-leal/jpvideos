@@ -487,11 +487,16 @@ h4 {
 /* Responsive Styles */
 @media (max-width: 768px) {
     /* Logo Adjustment */
+    nav {
+        top: 15px; /* Reset */
+        height: auto; /* Let content define height */
+    }
+    
     .logo {
-        font-size: 1.7em;
-        margin-left: -26px;
+        font-size: 1.5em;
+        margin-left: -39px;
         padding-top: 0;
-        transform: scaleY(0.9); /* Compress the height */
+        transform: scaleY(0.97); /* Compress the height */
     }
     .nav-container {
         display: flex;
@@ -499,7 +504,7 @@ h4 {
         align-items: center;
         width: 100%; /* Ensure the container takes up full width */
        padding: 0 100px;
-        margin-top: 25px;
+        margin-top: 20px;
     }
 
    
@@ -535,10 +540,11 @@ h4 {
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
         max-width: 100%;
-        width: calc(100% - 20px); /* Adds 10px margin on each side */
+        width: calc(100% - 30px); /* Adds 10px margin on each side */
         padding: 0;
-        margin: 80px auto;
+        margin: 50px auto;
         display: grid;
+        gap: 10px;
     }
 
     .portfolio-container > * {
@@ -560,7 +566,7 @@ h4 {
     /* Menu Button Display */
     .menu-button {
         display: flex;
-        margin-left: 15px;
+        margin-left: 65px;
         top: 15px;
         right: 75px;
         width: 25px;
