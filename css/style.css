@@ -206,6 +206,7 @@ nav .nav-links li:last-child {
     position: fixed;
     top: 0;
     right: 0;
+    margin: 0;
     height: 100vh;
     width: 250px;
     background-color: white;
@@ -658,12 +659,17 @@ h4 {
 
 
 @media (max-width: 480px) {
+
+  
     /* Logo Further Adjustment */
     .logo {
         font-size: 1.4em;
         margin-left: 10px;
         padding-top: 5px;
     }
+    
+    
+    
     .menu-button {
         display: flex;
         margin-left: 0px;
@@ -705,6 +711,6 @@ h4 {
 
     /* Sidebar Adjustment */
     .sidebar {
-        width: 100%;
+        width:50%;
     }
 }
