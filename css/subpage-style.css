@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'SweetieBeastie';
+    src: url('/Users/joaoleal/Library/Fonts/Sweetie Besstie.ttf') format('truetype'); /* Replace with the correct path to your font */
+}
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif; /* Thin sans-serif font for text */
@@ -46,7 +51,7 @@ header {
 }
 
 header h1 {
-    font-family: 'Playfair Display', serif; /* Playfair Display font for titles */
+    font-family: 'SweetieBeastie', sans-serif; 
     font-size: 2.5em;
     margin: 0;
     flex: 1;
@@ -76,6 +81,7 @@ header button:hover {
     cursor: pointer;
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit text color from parent (or set your own) */
+    font-family: 'SweetieBeastie', sans-serif;
 }
 
 .logo:hover {
